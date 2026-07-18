@@ -3,13 +3,13 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Source material not needed to serve the color launch page
+# Source material not needed to serve the launch page
 BillsProductLogo/
 images/
 video/
 .claude/
 
 # Other launch-page versions and unused assets
-launch/index.html
-launch/assets/bills-lockup-alpha.png
-launch/assets/ezeset-logo-alpha.png
+index-bw.html
+assets/bills-lockup-alpha.png
+assets/ezeset-logo-alpha.png
