@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EZE-SET — The Screw-In Pipe Support. Set It Once. It Holds.</title>
+<meta name="description" content="EZE-SET is the screw-in, height-adjustable pipe support anchor. No digging, no concrete — drive it in, set the pipe, dial in exact grade.">
+<style>
+  :root{
+    --navy:#0d3474;        /* wordmark blue */
+    --navy-deep:#0a2657;   /* dark bands */
+    --navy-line:#1d4489;   /* rules on navy */
+    --denim:#2a5cb8;       /* overalls blue */
+    --red:#e05020;         /* shirt orange-red */
+    --red-dk:#c44117;
+    --tan:#e8c48c;         /* skin tan */
+    --cream:#f8f2e6;       /* warm paper */
+    --white:#ffffff;
+    --ink:#132038;         /* warm-dark text */
+    --gray:#6e7684;        /* muted text on light */
+    --gray-lt:#b9c4d6;     /* muted text on navy */
+    --line:#e7dfcd;        /* rules on cream/white */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--white);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  img,video{display:block;max-width:100%}
+  a{color:inherit}
+
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  /* ---------- type ---------- */
+  .kicker{
+    font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--red);margin-bottom:18px;
+  }
+  h1,h2,h3{font-weight:800;letter-spacing:-.02em;text-transform:uppercase;line-height:.95}
+  h2{font-size:clamp(34px,5vw,58px)}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(10,38,87,.94);
+    backdrop-filter:blur(8px);color:var(--white);
+    border-bottom:1px solid var(--navy-line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{font-weight:800;font-size:20px;letter-spacing:.06em;text-decoration:none}
+  .wordmark em{font-style:normal;color:var(--tan)}
+  .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+  .nav-links a{
+    text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gray-lt);
+  }
+  .nav-links a:hover{color:var(--white)}
+  .nav-cta{
+    border:1px solid var(--red);background:var(--red);padding:9px 18px;color:var(--white)!important;
+  }
+  .nav-cta:hover{background:var(--red-dk);border-color:var(--red-dk)}
+  @media(max-width:760px){.nav-links li:not(:last-child){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;background:var(--navy-deep);color:var(--white);overflow:hidden}
+  .hero-bg{
+    position:absolute;inset:0;background:url("assets/field-jobsite.jpg") center 35%/cover no-repeat;
+    filter:grayscale(.55) contrast(1.05) brightness(.6);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,38,87,.72) 0%,rgba(10,38,87,.42) 45%,rgba(7,26,60,.94) 100%);
+  }
+  .hero-inner{position:relative;padding:120px 0 110px;max-width:760px}
+  .hero h1{font-size:clamp(52px,8.4vw,104px)}
+  .hero h1 .dim{color:var(--tan)}
+  .hero p.lede{
+    margin:28px 0 40px;font-size:clamp(17px,2vw,21px);color:#dbe4f2;max-width:560px;font-weight:400;
+  }
+  .hero-mascot{
+    position:absolute;right:40px;bottom:0;width:min(290px,24vw);z-index:1;
+    filter:drop-shadow(0 12px 30px rgba(0,0,0,.45))
+           drop-shadow(0 0 14px rgba(255,255,255,.45))
+           drop-shadow(0 0 38px rgba(255,255,255,.25));
+  }
+  @media(max-width:1000px){.hero-mascot{display:none}}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:16px 32px;font-size:14px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--white);
+    transition:all .15s ease;
+  }
+  .btn-solid{background:var(--red);border-color:var(--red);color:var(--white)}
+  .btn-solid:hover{background:var(--red-dk);border-color:var(--red-dk)}
+  .btn-ghost{color:var(--white)}
+  .btn-ghost:hover{background:var(--white);color:var(--navy)}
+  .hero-note{
+    position:relative;display:flex;gap:34px;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);
+    flex-wrap:wrap;
+  }
+  .hero-note span{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--tan)}
+
+  /* ---------- problem strip ---------- */
+  .problem{background:var(--cream);border-bottom:1px solid var(--line)}
+  .problem .wrap{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:60px;padding-top:96px;padding-bottom:96px;align-items:center;
+  }
+  .problem h2{color:var(--navy)}
+  .problem p:not(.kicker){color:var(--gray);font-size:18px;margin-top:22px;max-width:460px}
+  .problem-list{list-style:none;border-top:2px solid var(--navy)}
+  .problem-list li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+    font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:17px;color:var(--navy);
+  }
+  .problem-list li em{
+    font-style:normal;font-weight:400;text-transform:none;letter-spacing:0;
+    color:var(--gray);font-size:14px;text-align:right;
+  }
+  @media(max-width:860px){.problem .wrap{grid-template-columns:1fr;gap:40px}}
+
+  /* ---------- video ---------- */
+  .demo{background:var(--navy-deep);color:var(--white);padding:96px 0}
+  .demo .kicker{color:var(--tan)}
+  .demo-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;gap:24px;flex-wrap:wrap}
+  .demo-head p{color:var(--gray-lt);max-width:420px}
+  .video-frame{border:1px solid var(--navy-line)}
+  .video-frame video{width:100%;aspect-ratio:16/9;background:#000}
+
+  /* ---------- steps ---------- */
+  .steps{padding:110px 0 90px}
+  .steps h2{color:var(--navy)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--navy);margin-top:54px}
+  .step{padding:38px 34px 46px;border-bottom:1px solid var(--line)}
+  .step:not(:last-child){border-right:1px solid var(--line)}
+  .step .num{
+    font-size:64px;font-weight:800;letter-spacing:-.03em;
+    -webkit-text-stroke:1.5px var(--red);color:transparent;line-height:1;
+  }
+  .step h3{font-size:24px;margin:26px 0 12px;color:var(--navy)}
+  .step p{color:var(--gray);font-size:15px}
+  @media(max-width:860px){
+    .steps-grid{grid-template-columns:1fr}
+    .step:not(:last-child){border-right:none}
+  }
+
+  /* ---------- anatomy ---------- */
+  .anatomy{background:var(--cream);padding:100px 0}
+  .anatomy .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+  .anatomy h2{color:var(--navy)}
+  .anatomy-img{border:1px solid var(--line);background:var(--white)}
+  .anatomy-img img{width:100%}
+  .part{border-top:1px solid var(--navy);padding:24px 0}
+  .part:last-child{border-bottom:1px solid var(--line)}
+  .part h3{font-size:19px;display:flex;gap:16px;align-items:baseline;color:var(--navy)}
+  .part h3 span{font-size:13px;color:var(--red);font-weight:700}
+  .part p{color:var(--gray);font-size:15px;margin-top:8px;max-width:420px}
+  @media(max-width:860px){.anatomy .wrap{grid-template-columns:1fr;gap:44px}}
+
+  /* ---------- field gallery ---------- */
+  .field{padding:110px 0}
+  .field h2{color:var(--navy)}
+  .field-head{max-width:640px;margin-bottom:54px}
+  .field-head p:not(.kicker){color:var(--gray);font-size:18px;margin-top:22px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .shot{position:relative;overflow:hidden;background:var(--navy-deep)}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .shot:hover img{transform:scale(1.03)}
+  .shot.tall{grid-row:span 2}
+  .shot figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:14px 16px;
+    background:linear-gradient(0deg,rgba(10,38,87,.88),transparent);
+    color:var(--white);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  }
+  @media(max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
+
+  /* ---------- benefits band ---------- */
+  .benefits{background:var(--navy-deep);color:var(--white);padding:96px 0}
+  .benefits .kicker{color:var(--tan)}
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--navy-line);border:1px solid var(--navy-line);margin-top:50px}
+  .benefit{background:var(--navy);padding:36px 30px 44px;border-top:3px solid var(--red)}
+  .benefit h3{font-size:20px;margin-bottom:12px}
+  .benefit p{color:var(--gray-lt);font-size:15px}
+  @media(max-width:860px){.benefits-grid{grid-template-columns:1fr}}
+
+  /* ---------- final CTA ---------- */
+  .cta{padding:110px 0 120px;text-align:center;border-bottom:1px solid var(--line);background:var(--cream)}
+  .cta h2{font-size:clamp(40px,7vw,84px);color:var(--navy)}
+  .cta p:not(.kicker){color:var(--gray);font-size:18px;margin:24px auto 44px;max-width:520px}
+  .cta-mascot{width:min(200px,50vw);margin:0 auto 36px}
+  .btn-navy{border-color:var(--navy);color:var(--navy)}
+  .btn-navy:hover{background:var(--navy);color:var(--white)}
+  .btn-red-solid{background:var(--red);color:var(--white);border-color:var(--red)}
+  .btn-red-solid:hover{background:var(--red-dk);border-color:var(--red-dk)}
+  .cta .btn-row{justify-content:center}
+
+  footer{padding:34px 0;background:var(--navy-deep);color:var(--white)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-lt)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top">EZE<em>-</em>SET</a>
+    <ul class="nav-links">
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#field">In the field</a></li>
+      <li><a class="nav-cta" href="#get">Get EZE-SET</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <img class="hero-mascot" src="assets/bills-mascot-alpha.png" alt="Bill's Plumbing mascot with pipe wrench">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="kicker" style="color:var(--tan)">The screw-in pipe support</p>
+      <h1>Set it once.<br><span class="dim">It holds.</span></h1>
+      <p class="lede">EZE-SET is the height-adjustable screw anchor that supports water and sewage lines in soft, uneven ground — no digging, no concrete, no callbacks.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="#demo">Watch the demo</a>
+        <a class="btn btn-ghost" href="#get">Get EZE-SET</a>
+      </div>
+    </div>
+    <div class="hero-note">
+      <span>No digging</span>
+      <span>No concrete</span>
+      <span>Installs in seconds</span>
+      <span>Field proven</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <div>
+      <p class="kicker">The problem</p>
+      <h2>Pipes sag.<br>Shift. Fail.</h2>
+      <p>Soft, uneven ground won't hold a water or sewage line in place. Blocking and backfill settle, grade drifts, and the line ends up back on your schedule.</p>
+    </div>
+    <ul class="problem-list">
+      <li>Sagging lines <em>lost grade, standing waste</em></li>
+      <li>Shifting bedding <em>settles after backfill</em></li>
+      <li>Concrete &amp; cribbing <em>slow, heavy, permanent</em></li>
+      <li>Rework <em>dig it up, do it again</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- DEMO VIDEO -->
+<section class="demo" id="demo">
+  <div class="wrap">
+    <div class="demo-head">
+      <div>
+        <p class="kicker">See it work</p>
+        <h2>30 seconds.<br>Start to set.</h2>
+      </div>
+      <p>Drive the anchor, seat the pipe in the cradle, thread the plate to exact grade. That's the whole install.</p>
+    </div>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline poster="assets/demo-poster.jpg">
+        <source src="assets/ezset-demo.mp4" type="video/mp4">
+        Your browser doesn't support embedded video. <a href="assets/ezset-demo.mp4">Download the demo</a>.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps" id="how">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2>Three steps. One tool.</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Drive</h3>
+        <p>Screw it in. No digging, no concrete — the threaded auger anchors deep in seconds, even where other supports can't bite.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Set</h3>
+        <p>Drop the pipe into the cradle. It locks onto the bolt head and grips the line — no sag, no shift, no drift.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Dial in</h3>
+        <p>Thread the adjuster plate up or down to hit exact grade. Fine-tune anytime — before or after backfill.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANATOMY -->
+<section class="anatomy">
+  <div class="wrap">
+    <figure class="anatomy-img">
+      <img src="assets/field-inhand.jpg" alt="EZE-SET unit held in hand: threaded screw anchor with adjuster plate">
+    </figure>
+    <div>
+      <p class="kicker">The system</p>
+      <h2 style="margin-bottom:38px">Three parts.<br>Zero fuss.</h2>
+      <div class="part">
+        <h3><span>01</span> Screw anchor</h3>
+        <p>One piece, threaded to the point. Drives straight into soft or uneven ground and stays put.</p>
+      </div>
+      <div class="part">
+        <h3><span>02</span> Adjuster plate</h3>
+        <p>Threads up and down the shaft to set height — your grade control, on the anchor itself.</p>
+      </div>
+      <div class="part">
+        <h3><span>03</span> Pipe cradle</h3>
+        <p>Locks onto the bolt head and grips the pipe. Interchangeable cradles fit multiple pipe sizes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD -->
+<section class="field" id="field">
+  <div class="wrap">
+    <div class="field-head">
+      <p class="kicker">In the field</p>
+      <h2>Proven where it counts.</h2>
+      <p>Real installs on a live pipeline job in northern British Columbia — soft ground, rock bedding, working iron overhead.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot tall">
+        <img src="assets/field-installed.jpg" alt="EZE-SET anchor installed flush in the ground with cradle ready" loading="lazy">
+        <figcaption>Anchored &amp; set</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/field-jobsite.jpg" alt="Pipeline supported by EZE-SET on a rock-bedded trench with excavator" loading="lazy">
+        <figcaption>On the line</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/field-cradle.jpg" alt="EZE-SET cradle gripping a water line" loading="lazy">
+        <figcaption>Cradle locked</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/field-plate.jpg" alt="Adjuster plate on an installed EZE-SET anchor" loading="lazy">
+        <figcaption>Grade control</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/field-mud.jpg" alt="EZE-SET holding in wet, muddy ground" loading="lazy">
+        <figcaption>Holds in the muck</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="wrap">
+    <p class="kicker">Built to last</p>
+    <h2>Why it wins</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <h3>Soft &amp; uneven ground</h3>
+        <p>Anchors where blocking and cribbing can't — the threaded auger bites deep and holds.</p>
+      </div>
+      <div class="benefit">
+        <h3>Reusable &amp; removable</h3>
+        <p>Back it out and reset it anytime. Nothing poured, nothing wasted, nothing left behind.</p>
+      </div>
+      <div class="benefit">
+        <h3>Corrosion-proof</h3>
+        <p>Built for buried, wet service. Set it under a line and forget it's there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="get">
+  <div class="wrap">
+    <img class="cta-mascot" src="assets/bills-mascot-alpha.png" alt="Bill's Plumbing mascot">
+    <p class="kicker">Launching 2026</p>
+    <h2>Get EZE-SET first.</h2>
+    <p>Distributor, contractor, or utility? Get pricing, samples, and availability for the first production run.</p>
+    <div class="btn-row">
+      <a class="btn btn-red-solid" href="mailto:ken.mcgonigal@gmail.com?subject=EZE-SET%20launch%20—%20pricing%20%26%20availability">Request pricing</a>
+      <a class="btn btn-navy" href="#demo">Rewatch the demo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>EZE-SET</span>
+    <span style="color:var(--tan)">Set it once. It holds.</span>
+    <span>© 2026 — All rights reserved</span>
+  </div>
+</footer>
+
+</body>
+</html>
