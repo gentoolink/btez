@@ -78,13 +78,6 @@
   .hero p.lede{
     margin:28px 0 40px;font-size:clamp(17px,2vw,21px);color:#dbe4f2;max-width:560px;font-weight:400;
   }
-  .hero-mascot{
-    position:absolute;right:40px;bottom:0;width:min(290px,24vw);z-index:1;
-    filter:drop-shadow(0 12px 30px rgba(0,0,0,.45))
-           drop-shadow(0 0 14px rgba(255,255,255,.45))
-           drop-shadow(0 0 38px rgba(255,255,255,.25));
-  }
-  @media(max-width:1000px){.hero-mascot{display:none}}
   .btn-row{display:flex;gap:14px;flex-wrap:wrap}
   .btn{
     display:inline-block;padding:16px 32px;font-size:14px;font-weight:700;
@@ -188,7 +181,6 @@
   .cta{padding:110px 0 120px;text-align:center;border-bottom:1px solid var(--line);background:var(--cream)}
   .cta h2{font-size:clamp(40px,7vw,84px);color:var(--navy)}
   .cta p:not(.kicker){color:var(--gray);font-size:18px;margin:24px auto 44px;max-width:520px}
-  .cta-mascot{width:min(200px,50vw);margin:0 auto 36px}
   .btn-navy{border-color:var(--navy);color:var(--navy)}
   .btn-navy:hover{background:var(--navy);color:var(--white)}
   .btn-red-solid{background:var(--red);color:var(--white);border-color:var(--red)}
@@ -217,7 +209,6 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg"></div>
-  <img class="hero-mascot" src="assets/bills-mascot-alpha.png" alt="Bill's Plumbing mascot with pipe wrench">
   <div class="wrap">
     <div class="hero-inner">
       <p class="kicker" style="color:var(--tan)">The screw-in pipe support</p>
@@ -381,7 +372,6 @@
 <!-- CTA -->
 <section class="cta" id="get">
   <div class="wrap">
-    <img class="cta-mascot" src="assets/bills-mascot-alpha.png" alt="Bill's Plumbing mascot">
     <p class="kicker">Launching 2026</p>
     <h2>Get EZE-SET first.</h2>
     <p>Distributor, contractor, or utility? Get pricing, samples, and availability for the first production run.</p>
