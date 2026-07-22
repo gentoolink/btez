@@ -48,8 +48,8 @@
     border-bottom:1px solid var(--navy-line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .wordmark{font-weight:800;font-size:20px;letter-spacing:.06em;text-decoration:none}
-  .wordmark em{font-style:normal;color:var(--tan)}
+  .wordmark{display:inline-flex;align-items:center;text-decoration:none}
+  .wordmark img{height:24px;width:auto;display:block;filter:invert(1)}
   .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
   .nav-links a{
     text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;
@@ -207,13 +207,14 @@
   footer{padding:34px 0;background:var(--navy-deep);color:var(--white)}
   footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
   footer span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-lt)}
+  footer .foot-logo{height:20px;width:auto;filter:invert(1);opacity:.9}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="#top">EZE<em>-</em>SET</a>
+    <a class="wordmark" href="#top"><img src="assets/ezeset-logo-alpha.png" alt="EZE-SET"></a>
     <ul class="nav-links">
       <li><a href="#demo">Demo</a></li>
       <li><a href="#how">How it works</a></li>
@@ -429,7 +430,7 @@
 
 <footer>
   <div class="wrap">
-    <span>EZE-SET</span>
+    <img class="foot-logo" src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
     <span style="color:var(--tan)">Set it once. It holds.</span>
     <span>© 2026 — All rights reserved</span>
   </div>
