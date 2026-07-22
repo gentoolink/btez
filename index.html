@@ -138,6 +138,23 @@
     .step:not(:last-child){border-right:none}
   }
 
+  /* ---------- applications ---------- */
+  .apps{background:var(--navy-deep);color:var(--white);padding:100px 0}
+  .apps .kicker{color:var(--tan)}
+  .apps-head{max-width:640px}
+  .apps-head p:not(.kicker){color:var(--gray-lt);font-size:18px;margin-top:22px}
+  .apps-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:50px 0 0}
+  .app-card{background:var(--navy);border-top:3px solid var(--red);padding:34px 32px 40px}
+  .app-card h3{font-size:22px;color:var(--white);margin-bottom:16px;letter-spacing:.02em}
+  .app-card p{color:var(--gray-lt);font-size:15.5px;line-height:1.62}
+  .spec-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));
+    margin-top:20px;border-top:1px solid var(--navy-line)}
+  .spec-list li{padding:26px 24px 26px 0;border-bottom:1px solid var(--navy-line)}
+  .spec-list li strong{display:block;font-size:15px;color:var(--white);font-weight:700;
+    text-transform:uppercase;letter-spacing:.04em;margin-bottom:9px}
+  .spec-list li em{font-style:normal;color:var(--gray-lt);font-size:13.5px;line-height:1.5}
+  @media(max-width:860px){.apps-grid{grid-template-columns:1fr}}
+
   /* ---------- anatomy ---------- */
   .anatomy{background:var(--cream);padding:100px 0}
   .anatomy .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
@@ -286,6 +303,34 @@
         <p>Thread the adjuster plate up or down to hit exact grade. Fine-tune anytime — before or after backfill.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="apps" id="applications">
+  <div class="wrap">
+    <div class="apps-head">
+      <p class="kicker">On the job</p>
+      <h2>Works the way you do.</h2>
+      <p>Pressure or gravity feed, EZE-SET fits into your sequence instead of fighting it.</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card">
+        <h3>Pressure systems</h3>
+        <p>Complete the full piping install, then drill the holes for the &ldquo;squirt&rdquo; test and run it. Once testing is done, set the chamber over top — no additional supports, and no zip-tying the pipes to the chamber.</p>
+      </div>
+      <div class="app-card">
+        <h3>Gravity-feed systems</h3>
+        <p>Set the grade and run your testing. Then set the chambers over top for the final install — the line stays exactly where you dialed it in.</p>
+      </div>
+    </div>
+    <ul class="spec-list">
+      <li><strong>Fits 1&Prime;&ndash;4&Prime; pipe</strong><em>One anchor family across the full range.</em></li>
+      <li><strong>Any ground</strong><em>Clay, gravel, sand, or sandy-loam soils.</em></li>
+      <li><strong>Impact-resistant ABS</strong><em>A proven record of longevity in underground applications.</em></li>
+      <li><strong>Above-ground ready</strong><em>Order the UV-resistant type for irrigation and exposed runs.</em></li>
+      <li><strong>Direct burial</strong><em>Set straight into native soils.</em></li>
+    </ul>
   </div>
 </section>
 
