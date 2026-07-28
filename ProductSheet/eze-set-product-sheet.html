@@ -26,6 +26,9 @@
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%}
+  /* keep single-word last lines out of body copy (Chrome/Safari; harmless elsewhere) */
+  p,td,figcaption,.rows li em{text-wrap:pretty}
+  h1,h2,h3,.mini-h{text-wrap:balance}
 
   /* ---------- page shell ---------- */
   .page{
@@ -190,9 +193,10 @@
   .contact a{color:inherit;text-decoration:none}
 
   /* ---------- page 2 breathes a little more ---------- */
-  .p2 .sec{padding-top:.26in}
-  .p2 .specs th,.p2 .specs td{padding-top:.085in;padding-bottom:.085in}
-  .p2 .step{padding-top:.16in;padding-bottom:.2in}
+  .p2 .sec{padding-top:.31in}
+  .p2 .specs th,.p2 .specs td{padding-top:.098in;padding-bottom:.098in}
+  .p2 .step{padding-top:.16in;padding-bottom:.26in}
+  .p2 .cta{margin-top:.32in}
 
   /* ---------- screen-only helper ---------- */
   .hint{
@@ -274,7 +278,7 @@
     <div class="anatomy">
       <figure>
         <img src="assets/field-inhand.jpg" alt="EZE-SET unit: threaded screw anchor with adjuster plate">
-        <figcaption>Anchor, plate &amp; cradle &mdash; one assembly</figcaption>
+        <figcaption>Anchor, plate &amp; cradle</figcaption>
       </figure>
       <div>
         <div class="part">
@@ -337,7 +341,7 @@
       <div class="step">
         <div class="num">01</div>
         <h3>Drive</h3>
-        <p>Screw it in. The threaded auger anchors deep in seconds, even where other supports can&rsquo;t bite. No digging, no concrete.</p>
+        <p>Screw it in. The threaded auger anchors deep in seconds, even where other supports can&rsquo;t bite.</p>
       </div>
       <div class="step">
         <div class="num">02</div>
@@ -372,7 +376,7 @@
     <h2>At a glance</h2>
     <table class="specs">
       <tr><th>Pipe capacity</th><td>Fits 1&Prime;&ndash;4&Prime; pipe &mdash; one anchor family across the full range, with interchangeable cradles.</td></tr>
-      <tr><th>Ground conditions</th><td>Clay, gravel, sand, or sandy-loam soils. Anchors in soft and uneven ground where blocking and cribbing can&rsquo;t.</td></tr>
+      <tr><th>Ground conditions</th><td>Clay, gravel, sand, or sandy-loam soils. Holds in soft, uneven ground where blocking can&rsquo;t.</td></tr>
       <tr><th>Material</th><td>Impact-resistant ABS &mdash; a proven record of longevity in underground applications. Corrosion-proof in buried, wet service. UV-resistant type available for above-ground irrigation and exposed runs.</td></tr>
       <tr><th>Installation</th><td>Direct burial into native soils. Screw-in by hand or driver &mdash; no excavation, no concrete, no cribbing.</td></tr>
       <tr><th>Height adjustment</th><td>Threaded adjuster plate travels the shaft for exact grade; adjustable before or after backfill.</td></tr>
