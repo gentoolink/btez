@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EZE-SET — Product Sheet</title>
+<style>
+  :root{
+    --navy:#0d3474;
+    --navy-deep:#0a2657;
+    --navy-line:#1d4489;
+    --red:#e05020;
+    --tan:#e8c48c;
+    --cream:#f8f2e6;
+    --white:#ffffff;
+    --ink:#132038;
+    --gray:#6e7684;
+    --gray-lt:#b9c4d6;
+    --line:#e7dfcd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#8b8f96}
+  body{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink);line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+
+  /* ---------- page shell ---------- */
+  .page{
+    position:relative;
+    width:8.5in;height:11in;
+    margin:0 auto 24px;
+    background:var(--white);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .pad{padding:0 .5in}
+
+  h1,h2,h3{font-weight:800;letter-spacing:-.02em;text-transform:uppercase;line-height:.96}
+  .kicker{
+    font-size:7.5pt;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--red);
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    background:var(--navy-deep);color:var(--white);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.22in .5in;border-bottom:3px solid var(--red);
+  }
+  .masthead img{height:20px;width:auto;filter:invert(1)}
+  .mast-right{text-align:right}
+  .mast-right .t1{
+    font-size:8pt;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--tan);
+  }
+  .mast-right .t2{
+    font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-lt);margin-top:3px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;height:2.35in;background:var(--navy-deep);overflow:hidden;color:var(--white)}
+  .hero-bg{
+    position:absolute;inset:0;
+    background:url("assets/field-jobsite.jpg") center 38%/cover no-repeat;
+    filter:grayscale(.55) contrast(1.05) brightness(.62);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,38,87,.74) 0%,rgba(10,38,87,.5) 45%,rgba(7,26,60,.95) 100%);
+  }
+  .hero-inner{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 .5in;max-width:5.6in}
+  .hero .kicker{color:var(--tan)}
+  .hero h1{font-size:44pt;margin:.09in 0 .1in}
+  .hero h1 .dim{color:var(--tan)}
+  .hero p{font-size:10pt;color:#dbe4f2;max-width:4.3in;line-height:1.5}
+
+  /* ---------- claim strip ---------- */
+  .claims{
+    display:flex;background:var(--navy);color:var(--white);
+    border-bottom:1px solid var(--navy-line);
+  }
+  .claims div{
+    flex:1;text-align:center;padding:.14in 0;
+    font-size:8pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tan);
+    border-right:1px solid var(--navy-line);
+  }
+  .claims div:last-child{border-right:none}
+
+  /* ---------- generic section ---------- */
+  .sec{padding:.22in .5in 0}
+  .sec h2{font-size:17.5pt;color:var(--navy);margin-top:.06in}
+  .sec .sub{font-size:9.5pt;color:var(--gray);margin-top:.08in;max-width:5.4in}
+
+  /* ---------- two-col problem / benefit ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:.42in;margin-top:.16in}
+  .mini-h{
+    font-size:8pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--navy);padding-bottom:.07in;border-bottom:2px solid var(--navy);
+  }
+  .rows{list-style:none}
+  .rows li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:.14in;
+    padding:.085in 0;border-bottom:1px solid var(--line);
+    font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--navy);
+  }
+  .rows li em{
+    font-style:normal;font-weight:400;text-transform:none;letter-spacing:0;
+    color:var(--gray);font-size:8pt;text-align:right;flex:0 0 auto;max-width:1.7in;
+  }
+  .rows.win li{color:var(--ink)}
+  .rows.win li strong{color:var(--navy)}
+
+  /* ---------- anatomy ---------- */
+  .anatomy{
+    display:grid;grid-template-columns:2.35in 1fr;gap:.35in;align-items:start;
+    margin-top:.14in;
+  }
+  .anatomy figure{border:1px solid var(--line);background:var(--cream)}
+  .anatomy figure img{width:100%;height:2.6in;object-fit:cover;object-position:center 42%}
+  .anatomy figcaption{
+    font-size:6.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+    padding:.07in .1in;border-top:1px solid var(--line);
+  }
+  .part{border-top:1px solid var(--navy);padding:.12in 0 .13in}
+  .part:last-child{border-bottom:1px solid var(--line)}
+  .part h3{font-size:11.5pt;color:var(--navy);display:flex;gap:.12in;align-items:baseline}
+  .part h3 span{font-size:8pt;color:var(--red);font-weight:700}
+  .part p{font-size:8.8pt;color:var(--gray);margin-top:.05in}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:auto;background:var(--navy-deep);color:var(--gray-lt);
+    display:flex;justify-content:space-between;align-items:center;gap:.2in;
+    padding:.16in .5in;font-size:7pt;letter-spacing:.16em;text-transform:uppercase;
+  }
+  .foot .tag{color:var(--tan);font-weight:700}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--navy);margin-top:.16in}
+  .step{padding:.13in .18in .16in 0;border-bottom:1px solid var(--line)}
+  .step:not(:last-child){border-right:1px solid var(--line);}
+  .step:not(:first-child){padding-left:.18in}
+  .step .num{
+    font-size:22pt;font-weight:800;letter-spacing:-.03em;line-height:1;
+    -webkit-text-stroke:1.2px var(--red);color:transparent;
+  }
+  .step h3{font-size:12pt;color:var(--navy);margin:.07in 0 .04in}
+  .step p{font-size:8.6pt;color:var(--gray)}
+
+  /* ---------- applications ---------- */
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:.2in;margin-top:.16in}
+  .app{background:var(--cream);border-top:3px solid var(--red);padding:.16in .18in .18in}
+  .app h3{font-size:11pt;color:var(--navy);margin-bottom:.07in;letter-spacing:0}
+  .app p{font-size:8.6pt;color:var(--gray);line-height:1.55}
+
+  /* ---------- spec table ---------- */
+  .specs{width:100%;border-collapse:collapse;margin-top:.16in;border-top:2px solid var(--navy)}
+  .specs th,.specs td{text-align:left;padding:.07in .12in .07in 0;border-bottom:1px solid var(--line);vertical-align:top}
+  .specs th{
+    width:1.75in;font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--navy);
+  }
+  .specs td{font-size:8.8pt;color:var(--gray)}
+
+  /* ---------- field strip (full bleed, sits above footer) ---------- */
+  .stripe{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--white);margin-top:auto}
+  .stripe + .foot{margin-top:0}
+  .shot{position:relative;overflow:hidden;background:var(--navy-deep)}
+  .shot img{width:100%;height:.95in;object-fit:cover}
+  .shot figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:.05in .09in;
+    background:linear-gradient(0deg,rgba(10,38,87,.92),rgba(10,38,87,0));
+    color:var(--white);font-size:6pt;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta{
+    margin:.2in .5in 0;background:var(--navy-deep);color:var(--white);
+    padding:.2in .3in .22in;border-left:5px solid var(--red);
+    display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:center;
+  }
+  .cta .kicker{color:var(--tan)}
+  .cta h2{font-size:17pt;color:var(--white);margin:.06in 0 .05in}
+  .cta p{font-size:9pt;color:var(--gray-lt);max-width:3.7in}
+  .contact{text-align:right;border-left:1px solid var(--navy-line);padding-left:.3in}
+  .contact .lbl{font-size:6.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--gray-lt)}
+  .contact .val{font-size:10pt;font-weight:700;color:var(--white);margin:.04in 0 .12in;letter-spacing:.01em}
+  .contact .val:last-child{margin-bottom:0}
+  .contact a{color:inherit;text-decoration:none}
+
+  /* ---------- page 2 breathes a little more ---------- */
+  .p2 .sec{padding-top:.26in}
+  .p2 .specs th,.p2 .specs td{padding-top:.085in;padding-bottom:.085in}
+  .p2 .step{padding-top:.16in;padding-bottom:.2in}
+
+  /* ---------- screen-only helper ---------- */
+  .hint{
+    max-width:8.5in;margin:18px auto 10px;color:#fff;font-size:12px;
+    letter-spacing:.12em;text-transform:uppercase;text-align:center;opacity:.85;
+  }
+
+  /* ---------- print ---------- */
+  @page{size:letter portrait;margin:0}
+  @media print{
+    html,body{background:var(--white)}
+    .hint{display:none}
+    .page{margin:0;box-shadow:none;page-break-after:always;break-after:page}
+    .page:last-child{page-break-after:auto;break-after:auto}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  @media screen{
+    .page{box-shadow:0 6px 26px rgba(0,0,0,.35)}
+  }
+</style>
+</head>
+<body>
+
+<p class="hint">Print / Save as PDF &mdash; Letter, portrait, margins: none, background graphics: on</p>
+
+<!-- ============================= PAGE 1 ============================= -->
+<section class="page">
+
+  <div class="masthead">
+    <img src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
+    <div class="mast-right">
+      <div class="t1">Pipe Laying Systems</div>
+      <div class="t2">Product Data Sheet &middot; 2026</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <p class="kicker">The screw-in pipe support</p>
+      <h1>Set it once.<br><span class="dim">It holds.</span></h1>
+      <p>The height-adjustable screw anchor that supports water and sewage lines in soft, uneven ground &mdash; no digging, no concrete, no callbacks.</p>
+    </div>
+  </div>
+
+  <div class="claims">
+    <div>No digging</div>
+    <div>No concrete</div>
+    <div>Installs in seconds</div>
+    <div>Field proven</div>
+  </div>
+
+  <div class="sec">
+    <div class="split">
+      <div>
+        <div class="mini-h">The problem</div>
+        <ul class="rows">
+          <li>Sagging lines <em>lost grade, standing waste</em></li>
+          <li>Shifting bedding <em>settles after backfill</em></li>
+          <li>Concrete &amp; cribbing <em>slow, heavy, permanent</em></li>
+          <li>Rework <em>dig it up, do it again</em></li>
+        </ul>
+      </div>
+      <div>
+        <div class="mini-h">Why EZE-SET wins</div>
+        <ul class="rows">
+          <li>Soft &amp; uneven ground <em>the auger bites deep</em></li>
+          <li>Reusable &amp; removable <em>back it out, reset it</em></li>
+          <li>Corrosion-proof <em>built for buried, wet service</em></li>
+          <li>Grade on demand <em>adjust before or after backfill</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="kicker">The system</p>
+    <h2>Three parts. Zero fuss.</h2>
+    <div class="anatomy">
+      <figure>
+        <img src="assets/field-inhand.jpg" alt="EZE-SET unit: threaded screw anchor with adjuster plate">
+        <figcaption>Anchor, plate &amp; cradle &mdash; one assembly</figcaption>
+      </figure>
+      <div>
+        <div class="part">
+          <h3><span>01</span> Screw anchor</h3>
+          <p>One piece, threaded to the point. Drives straight into soft or uneven ground and stays put &mdash; no excavation, no poured base.</p>
+        </div>
+        <div class="part">
+          <h3><span>02</span> Adjuster plate</h3>
+          <p>Threads up and down the shaft to set height. Your grade control lives on the anchor itself, so fine-tuning never means re-digging.</p>
+        </div>
+        <div class="part">
+          <h3><span>03</span> Pipe cradle</h3>
+          <p>Locks onto the bolt head and grips the line &mdash; no sag, no shift, no drift. Interchangeable cradles fit multiple pipe sizes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <figure class="shot">
+      <img src="assets/field-installed.jpg" alt="EZE-SET anchor installed flush in the ground">
+      <figcaption>Anchored &amp; set</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/field-cradle.jpg" alt="EZE-SET cradle gripping a water line">
+      <figcaption>Cradle locked</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/field-plate.jpg" alt="Adjuster plate on an installed EZE-SET anchor">
+      <figcaption>Grade control</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/field-mud.jpg" alt="EZE-SET holding in wet, muddy ground">
+      <figcaption>Holds in the muck</figcaption>
+    </figure>
+  </div>
+
+  <div class="foot">
+    <span class="tag">In the field &mdash; northern British Columbia</span>
+    <span>EZE-SET Pipe Laying Systems &middot; ezset.ca</span>
+    <span>Page 1 of 2</span>
+  </div>
+</section>
+
+<!-- ============================= PAGE 2 ============================= -->
+<section class="page p2">
+
+  <div class="masthead">
+    <img src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
+    <div class="mast-right">
+      <div class="t1">Installation &amp; Specifications</div>
+      <div class="t2">Product Data Sheet &middot; 2026</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="kicker">How it works</p>
+    <h2>Three steps. One tool.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Drive</h3>
+        <p>Screw it in. The threaded auger anchors deep in seconds, even where other supports can&rsquo;t bite. No digging, no concrete.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Set</h3>
+        <p>Drop the pipe into the cradle. It locks onto the bolt head and grips the line &mdash; no sag, no shift, no drift.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Dial in</h3>
+        <p>Thread the adjuster plate up or down to hit exact grade. Fine-tune anytime, before or after backfill.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="kicker">On the job</p>
+    <h2>Works the way you do.</h2>
+    <div class="apps">
+      <div class="app">
+        <h3>Pressure systems</h3>
+        <p>Complete the full piping install, then drill the holes for the &ldquo;squirt&rdquo; test and run it. Once testing is done, set the chamber over top &mdash; no additional supports, and no zip-tying the pipes to the chamber.</p>
+      </div>
+      <div class="app">
+        <h3>Gravity-feed systems</h3>
+        <p>Set the grade and run your testing. Then set the chambers over top for the final install &mdash; the line stays exactly where you dialed it in.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="kicker">Specifications</p>
+    <h2>At a glance</h2>
+    <table class="specs">
+      <tr><th>Pipe capacity</th><td>Fits 1&Prime;&ndash;4&Prime; pipe &mdash; one anchor family across the full range, with interchangeable cradles.</td></tr>
+      <tr><th>Ground conditions</th><td>Clay, gravel, sand, or sandy-loam soils. Anchors in soft and uneven ground where blocking and cribbing can&rsquo;t.</td></tr>
+      <tr><th>Material</th><td>Impact-resistant ABS &mdash; a proven record of longevity in underground applications. Corrosion-proof in buried, wet service. UV-resistant type available for above-ground irrigation and exposed runs.</td></tr>
+      <tr><th>Installation</th><td>Direct burial into native soils. Screw-in by hand or driver &mdash; no excavation, no concrete, no cribbing.</td></tr>
+      <tr><th>Height adjustment</th><td>Threaded adjuster plate travels the shaft for exact grade; adjustable before or after backfill.</td></tr>
+      <tr><th>Serviceability</th><td>Fully reusable and removable &mdash; back it out and reset it. Nothing poured, nothing left behind.</td></tr>
+    </table>
+  </div>
+
+  <div class="cta">
+    <div>
+      <p class="kicker">Launching 2026</p>
+      <h2>Get EZE-SET first.</h2>
+      <p>Distributor, contractor, or utility? Ask for pricing, samples, and availability from the first production run.</p>
+    </div>
+    <div class="contact">
+      <div class="lbl">Pricing &amp; availability</div>
+      <div class="val"><a href="mailto:btownebill2020@gmail.com?subject=EZE-SET%20launch%20—%20pricing%20%26%20availability">btownebill2020@gmail.com</a></div>
+      <div class="lbl">Demo video &amp; details</div>
+      <div class="val"><a href="https://ezset.ca">ezset.ca</a></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="tag">Set it once. It holds.</span>
+    <span>ezset.ca &middot; &copy; 2026 EZE-SET &mdash; All rights reserved</span>
+    <span>Page 2 of 2</span>
+  </div>
+</section>
+
+</body>
+</html>
