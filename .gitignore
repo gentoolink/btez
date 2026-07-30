@@ -13,3 +13,9 @@ video/
 index-bw.html
 assets/bills-lockup-alpha.png
 assets/bills-mascot-alpha.png
+
+# Client deliverables (not part of the deployed site)
+client-package/
+pkg-preview.html
+ezeset-full-page.png
+ezeset-full-page.jpg
