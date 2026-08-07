@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EZE-SET — Disclaimer &amp; Terms of Use</title>
+<meta name="description" content="Installation responsibility, warranty disclaimer, and limitation of liability for EZE-SET pipe support anchors.">
+<style>
+  :root{
+    --navy:#0d3474;
+    --navy-deep:#0a2657;
+    --navy-line:#1d4489;
+    --red:#e05020;
+    --red-dk:#c44117;
+    --tan:#e8c48c;
+    --cream:#f8f2e6;
+    --white:#ffffff;
+    --ink:#132038;
+    --gray:#6e7684;
+    --gray-lt:#b9c4d6;
+    --line:#e7dfcd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--white);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  .kicker{
+    font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--red);margin-bottom:18px;
+  }
+  h1,h2,h3{font-weight:800;letter-spacing:-.02em;text-transform:uppercase;line-height:.95}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(10,38,87,.94);
+    backdrop-filter:blur(8px);color:var(--white);
+    border-bottom:1px solid var(--navy-line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{display:inline-flex;align-items:center;text-decoration:none}
+  .wordmark img{height:24px;width:auto;display:block;filter:invert(1)}
+  .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+  .nav-links a{
+    text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gray-lt);
+  }
+  .nav-links a:hover{color:var(--white)}
+  .nav-cta{
+    border:1px solid var(--red);background:var(--red);padding:9px 18px;color:var(--white)!important;
+  }
+  .nav-cta:hover{background:var(--red-dk);border-color:var(--red-dk)}
+  @media(max-width:760px){.nav-links li:not(:last-child){display:none}}
+
+  /* ---------- masthead ---------- */
+  .doc-head{background:var(--navy-deep);color:var(--white);padding:82px 0 74px}
+  .doc-head .kicker{color:var(--tan)}
+  .doc-head h1{font-size:clamp(38px,6.4vw,76px);max-width:14ch}
+  .doc-head p{margin-top:26px;color:#dbe4f2;font-size:clamp(16px,1.8vw,19px);max-width:620px}
+  .doc-meta{
+    margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.22);
+    display:flex;gap:34px;flex-wrap:wrap;
+  }
+  .doc-meta span{
+    font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--tan);
+  }
+
+  /* ---------- key notice ---------- */
+  .notice{background:var(--cream);border-bottom:1px solid var(--line);padding:54px 0}
+  .notice-box{
+    background:var(--white);border-left:5px solid var(--red);border-top:1px solid var(--line);
+    border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:32px 34px 34px;
+  }
+  .notice-box h2{font-size:22px;color:var(--navy);margin-bottom:14px}
+  .notice-box p{color:var(--ink);font-size:16.5px;max-width:80ch}
+  .notice-box p + p{margin-top:14px}
+
+  /* ---------- document body ---------- */
+  .doc{padding:76px 0 90px}
+  .doc-grid{display:grid;grid-template-columns:230px 1fr;gap:64px;align-items:start}
+
+  .toc{position:sticky;top:96px}
+  .toc h2{font-size:12px;letter-spacing:.24em;color:var(--navy);padding-bottom:12px;
+    border-bottom:2px solid var(--navy);margin-bottom:6px}
+  .toc ol{list-style:none;counter-reset:toc}
+  .toc li{counter-increment:toc;border-bottom:1px solid var(--line)}
+  .toc a{
+    display:flex;gap:10px;padding:11px 0;text-decoration:none;color:var(--gray);
+    font-size:13.5px;line-height:1.35;
+  }
+  .toc a::before{content:counter(toc,decimal-leading-zero);color:var(--red);font-weight:700;font-size:11px;padding-top:2px}
+  .toc a:hover{color:var(--navy)}
+
+  .clauses{counter-reset:clause;max-width:80ch}
+  .clause{padding:0 0 42px;scroll-margin-top:88px}
+  .clause:not(:last-child){border-bottom:1px solid var(--line);margin-bottom:42px}
+  .clause h2{
+    counter-increment:clause;font-size:23px;color:var(--navy);
+    display:flex;gap:16px;align-items:baseline;
+  }
+  .clause h2::before{
+    content:counter(clause,decimal-leading-zero);
+    font-size:13px;color:var(--red);font-weight:700;flex:0 0 auto;
+  }
+  .clause p{color:var(--gray);font-size:16px;margin-top:16px}
+  .clause strong{color:var(--ink);font-weight:700}
+  .clause ul{list-style:none;margin-top:18px}
+  .clause li{
+    position:relative;padding:0 0 0 22px;margin-top:11px;color:var(--gray);font-size:15.5px;
+  }
+  .clause li::before{
+    content:"";position:absolute;left:0;top:9px;width:9px;height:1px;background:var(--red);
+  }
+  .caps{text-transform:uppercase;letter-spacing:.02em;font-size:14.5px!important;color:var(--ink)!important;font-weight:600}
+
+  @media(max-width:880px){
+    .doc-grid{grid-template-columns:1fr;gap:44px}
+    .toc{position:static}
+  }
+
+  /* ---------- contact strip ---------- */
+  .contact{background:var(--navy-deep);color:var(--white);padding:70px 0 76px}
+  .contact .kicker{color:var(--tan)}
+  .contact h2{font-size:clamp(28px,4vw,44px)}
+  .contact p{color:var(--gray-lt);font-size:17px;margin-top:20px;max-width:520px}
+  .contact .lbl{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gray-lt);margin-top:30px;
+  }
+  .contact .val{font-size:19px;font-weight:700;margin-top:7px}
+  .contact .val a{text-decoration:none}
+  .contact .val a:hover{color:var(--tan)}
+
+  footer{padding:34px 0;background:var(--navy);color:var(--white);border-top:1px solid var(--navy-line)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-lt)}
+  footer a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-lt);text-decoration:none}
+  footer a:hover{color:var(--white)}
+  footer .foot-logo{height:20px;width:auto;filter:invert(1);opacity:.9}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="index.html"><img src="assets/ezeset-logo-alpha.png" alt="EZE-SET"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#demo">Demo</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#field">In the field</a></li>
+      <li><a class="nav-cta" href="index.html#get">Get EZE-SET</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="doc-head" id="top">
+  <div class="wrap">
+    <p class="kicker">Legal</p>
+    <h1>Disclaimer &amp; terms of use</h1>
+    <p>EZE-SET anchors are installed by the people who buy them, in ground conditions we never see. This page sets out what we stand behind, and what stays with the installer.</p>
+    <div class="doc-meta">
+      <span>Last updated 7 August 2026</span>
+      <span>British Columbia, Canada</span>
+    </div>
+  </div>
+</section>
+
+<section class="notice">
+  <div class="wrap">
+    <div class="notice-box">
+      <h2>Read this before you install</h2>
+      <p><strong>Correct installation is the responsibility of the installer.</strong> An EZE-SET anchor that is undersized for the load, driven into unsuitable ground, set to the wrong grade, spaced too far apart, or installed contrary to the product instructions can allow a pipe to sag, shift, or fail — with consequences that may include property damage, service interruption, contamination, or injury.</p>
+      <p>EZE-SET supplies a component. It does not design your piping system, inspect your site, or supervise your crew. If you are not certain the product is right for a given application, stop and consult a qualified professional engineer before installing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="wrap doc-grid">
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#install">Installation responsibility</a></li>
+        <li><a href="#codes">Codes, permits &amp; inspection</a></li>
+        <li><a href="#site">Site conditions &amp; suitability</a></li>
+        <li><a href="#intended">Intended use &amp; limitations</a></li>
+        <li><a href="#info">Product information</a></li>
+        <li><a href="#warranty">Warranty disclaimer</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#indemnity">Indemnification</a></li>
+        <li><a href="#site-content">Website content</a></li>
+        <li><a href="#governing">Governing law</a></li>
+        <li><a href="#changes">Changes to these terms</a></li>
+      </ol>
+    </nav>
+
+    <div class="clauses">
+
+      <section class="clause" id="install">
+        <h2>Installation responsibility</h2>
+        <p>EZE-SET products must be installed strictly in accordance with the product instructions supplied with them and with accepted trade practice for pipe support and bedding. The installer is solely responsible for the method, quality, and outcome of the installation, including:</p>
+        <ul>
+          <li>Selecting the correct anchor and cradle for the pipe size, material, and service.</li>
+          <li>Determining anchor spacing, embedment depth, and the number of supports required for the span and load.</li>
+          <li>Confirming that the anchor is fully and squarely driven, and that the cradle is properly seated on the pipe.</li>
+          <li>Setting and verifying final grade before, during, and after backfill.</li>
+          <li>Protecting the installation from damage during backfill, compaction, and subsequent construction activity.</li>
+          <li>Locating existing buried utilities and services before driving any anchor.</li>
+        </ul>
+        <p>EZE-SET accepts no responsibility or liability for any loss, damage, cost, or injury arising from improper, incomplete, or unsuitable installation, from installation contrary to the product instructions, or from any modification, alteration, cutting, heating, or repair of the product.</p>
+      </section>
+
+      <section class="clause" id="codes">
+        <h2>Codes, permits &amp; inspection</h2>
+        <p>It is the responsibility of the purchaser, installer, contractor, and owner to ensure that any installation using EZE-SET products complies with all applicable building codes, plumbing codes, municipal bylaws, utility standards, engineering specifications, permits, and inspection requirements in the jurisdiction where the work is performed.</p>
+        <p>Nothing on this website or in any EZE-SET material constitutes a representation that the product satisfies the requirements of any particular code, authority, standard, or specification, or that its use is approved for any particular project. Where a design, drawing, or installation must be approved, sealed, or inspected, obtaining that approval is not the responsibility of EZE-SET.</p>
+      </section>
+
+      <section class="clause" id="site">
+        <h2>Site conditions &amp; suitability</h2>
+        <p>The holding capacity of a screw anchor depends entirely on the ground it is driven into. Soil type, moisture content, density, frost, organic content, fill, disturbed or previously excavated ground, groundwater, and seasonal variation all materially affect performance, and none of these are within our knowledge or control.</p>
+        <p>Determining whether ground conditions at a specific location are suitable — and whether an engineered support is required instead of or in addition to EZE-SET — is the responsibility of the purchaser, installer, or their engineer. Field results shown on this website were achieved under particular site conditions and are illustrative only. <strong>They are not a prediction or guarantee of performance at any other site.</strong></p>
+      </section>
+
+      <section class="clause" id="intended">
+        <h2>Intended use &amp; limitations</h2>
+        <p>EZE-SET anchors are intended for the support and grade adjustment of water, sewage, and similar pipe within the sizes and conditions described in the product literature. They are not designed, tested, rated, or sold for:</p>
+        <ul>
+          <li>Structural or load-bearing use of any kind, including the support of foundations, decks, walkways, or equipment.</li>
+          <li>Supporting personnel, scaffolding, formwork, shoring, or trench walls.</li>
+          <li>Use as a lifting, rigging, anchoring, tie-down, or fall-protection point.</li>
+          <li>Gas, fuel, steam, high-pressure, high-temperature, or other hazardous service.</li>
+          <li>Any application in which failure of the support could cause serious injury or death, unless independently reviewed and approved by a qualified professional engineer.</li>
+        </ul>
+        <p>Use outside the intended application is entirely at the user's risk, and voids any warranty that would otherwise apply.</p>
+      </section>
+
+      <section class="clause" id="info">
+        <h2>Product information</h2>
+        <p>Specifications, dimensions, materials, capacities, images, and descriptions published on this website are provided for general information and are subject to change without notice as the product develops. Colours and finishes may vary from those shown. Product shown may be a prototype or pre-production sample.</p>
+        <p>Where a specific specification matters to your application, confirm it in writing with us before ordering or installing. Written confirmation for a specific order prevails over anything published here.</p>
+      </section>
+
+      <section class="clause" id="warranty">
+        <h2>Warranty disclaimer</h2>
+        <p>EZE-SET warrants only that its products will be free from defects in material and workmanship at the time of delivery. Any such warranty is limited, at our sole option, to the repair or replacement of the defective product, or to a refund of the purchase price paid for it. Claims must be made in writing within a reasonable time of discovery, and the product must be made available for inspection.</p>
+        <p class="caps">Except as expressly stated above, EZE-SET products are supplied "as is" and "as available", and EZE-SET disclaims all other warranties, conditions, and representations of any kind, whether express, implied, statutory, or arising from a course of dealing or usage of trade, including without limitation any implied warranty or condition of merchantability, merchantable quality, durability, or fitness for a particular purpose.</p>
+        <p>This warranty does not cover normal wear, damage in transit, damage caused by improper handling, storage, installation, backfill, compaction, excavation, vehicle or equipment loading, ground movement, freezing, chemical attack, exposure beyond the product's rated service, or any use outside the intended application described above.</p>
+      </section>
+
+      <section class="clause" id="liability">
+        <h2>Limitation of liability</h2>
+        <p class="caps">To the fullest extent permitted by law, EZE-SET and its owners, employees, agents, distributors, and suppliers shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, or for any loss of profit, revenue, production, contract, business opportunity, data, or goodwill, or for costs of excavation, re-excavation, removal, reinstallation, remediation, cleanup, service interruption, or third-party claims, arising out of or in connection with the product or its use, whether based in contract, tort (including negligence), strict liability, or any other theory, even if advised of the possibility of such damages.</p>
+        <p class="caps">In any event, the total aggregate liability of EZE-SET arising out of or relating to the product shall not exceed the purchase price actually paid for the specific product giving rise to the claim.</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties, conditions, or liabilities — including liability for death or personal injury caused by negligence, or for fraud. Where a limitation in these terms is not permitted by law, it does not apply, and the remaining provisions continue in full force. Nothing in these terms limits any right you have under applicable consumer protection legislation that cannot lawfully be excluded.</p>
+      </section>
+
+      <section class="clause" id="indemnity">
+        <h2>Indemnification</h2>
+        <p>The purchaser and installer agree to indemnify and hold harmless EZE-SET and its owners, employees, agents, distributors, and suppliers from and against any claim, demand, action, loss, damage, liability, cost, or expense (including reasonable legal fees) arising out of the installation, use, misuse, or removal of the product, or out of any failure to comply with product instructions, applicable codes, or these terms.</p>
+      </section>
+
+      <section class="clause" id="site-content">
+        <h2>Website content</h2>
+        <p>The content of this website, including the demonstration video and field photographs, is provided for general marketing and information purposes only. It is not installation instruction, engineering advice, or professional advice of any kind, and must not be relied on as a substitute for the product instructions supplied with the product or for the judgment of a qualified professional.</p>
+        <p>The demonstration video shows a simplified installation under favourable conditions to illustrate the principle of the product. It is not a complete installation procedure and does not show every step, precaution, or site condition that a real installation requires.</p>
+        <p>While we make reasonable efforts to keep this website accurate and current, we do not warrant that it is free from error or omission, or that it will be available without interruption.</p>
+      </section>
+
+      <section class="clause" id="governing">
+        <h2>Governing law</h2>
+        <p>These terms are governed by the laws of the Province of British Columbia and the federal laws of Canada applicable in that province, without regard to conflict of laws principles. The courts of British Columbia have exclusive jurisdiction over any dispute arising out of or relating to these terms or the product, and you consent to the jurisdiction of those courts.</p>
+      </section>
+
+      <section class="clause" id="changes">
+        <h2>Changes to these terms</h2>
+        <p>EZE-SET may revise these terms at any time by updating this page. The version in effect at the time of your purchase governs that purchase. The date shown at the top of this page indicates when it was last revised — please review it before placing an order.</p>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <p class="kicker">Questions</p>
+    <h2>Ask before you install.</h2>
+    <p>If anything about an application is unclear — pipe size, spacing, ground conditions, or whether EZE-SET is the right call at all — get in touch first. We would rather answer a question than hear about a failure.</p>
+    <div class="lbl">Product &amp; application questions</div>
+    <div class="val"><a href="mailto:btownebill2020@gmail.com?subject=EZE-SET%20—%20product%20question">btownebill2020@gmail.com</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="foot-logo" src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
+    <a href="index.html">Back to ezset.ca</a>
+    <span>© 2026 — All rights reserved</span>
+  </div>
+</footer>
+
+</body>
+</html>
