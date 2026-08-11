@@ -192,6 +192,39 @@
   .contact .val:last-child{margin-bottom:0}
   .contact a{color:inherit;text-decoration:none}
 
+  /* ---------- legal pages (3 & 4) ---------- */
+  .legal-lead{
+    margin:.18in .5in 0;background:var(--cream);
+    border:1px solid var(--line);border-left:5px solid var(--red);
+    padding:.15in .22in .17in;
+  }
+  .legal-lead h2{font-size:13pt;color:var(--navy)}
+  .legal-lead p{font-size:8.2pt;color:var(--ink);margin-top:.07in;line-height:1.5}
+  .legal{
+    display:grid;grid-template-columns:1fr 1fr;gap:0 .34in;
+    padding:0 .5in;margin-top:.18in;
+  }
+  .clause{padding-bottom:.15in}
+  .clause h3{
+    font-size:9pt;color:var(--navy);display:flex;gap:.1in;align-items:baseline;
+    border-bottom:1px solid var(--navy);padding-bottom:.05in;
+  }
+  .clause h3 span{font-size:6.5pt;color:var(--red);font-weight:700;letter-spacing:.04em}
+  .clause p{font-size:7.6pt;color:var(--gray);margin-top:.07in;line-height:1.45}
+  .clause strong{color:var(--ink);font-weight:700}
+  .clause ul{list-style:none;margin-top:.06in}
+  .clause li{
+    position:relative;padding-left:.13in;margin-top:.045in;
+    font-size:7.6pt;color:var(--gray);line-height:1.45;
+  }
+  .clause li::before{
+    content:"";position:absolute;left:0;top:.055in;width:.07in;height:1px;background:var(--red);
+  }
+  .caps{text-transform:uppercase;letter-spacing:.01em;color:var(--ink)!important;font-weight:600}
+  /* page 4 carries the longest clauses — tighten it to keep the footer on the page */
+  .p4 .clause{padding-bottom:.11in}
+  .p4 .cta{margin-top:.16in;padding:.17in .3in .19in}
+
   /* ---------- page 2 spacing (must leave room for the footer: 11in hard cap) ---------- */
   .p2 .sec{padding-top:.2in}
   .p2 .specs th,.p2 .specs td{padding-top:.064in;padding-bottom:.064in}
@@ -319,7 +352,7 @@
   <div class="foot">
     <span class="tag">In the field &mdash; northern British Columbia</span>
     <span>EZE-SET Pipe Laying Systems &middot; ezset.ca</span>
-    <span>Page 1 of 2</span>
+    <span>Page 1 of 4</span>
   </div>
 </section>
 
@@ -402,7 +435,157 @@
   <div class="foot">
     <span class="tag">Set it once. It holds.</span>
     <span>ezset.ca &middot; &copy; 2026 EZE-SET &mdash; All rights reserved</span>
-    <span>Page 2 of 2</span>
+    <span>Page 2 of 4</span>
+  </div>
+</section>
+
+<!-- ============================= PAGE 3 ============================= -->
+<section class="page p3">
+
+  <div class="masthead">
+    <img src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
+    <div class="mast-right">
+      <div class="t1">Disclaimer &amp; Terms of Use</div>
+      <div class="t2">Product Data Sheet &middot; 2026</div>
+    </div>
+  </div>
+
+  <div class="legal-lead">
+    <p class="kicker">Legal</p>
+    <h2>Read this before you install</h2>
+    <p><strong>Correct installation is the responsibility of the installer.</strong> An EZE-SET anchor that is undersized for the load, driven into unsuitable ground, set to the wrong grade, spaced too far apart, or installed contrary to the product instructions can allow a pipe to sag, shift, or fail &mdash; with consequences that may include property damage, service interruption, contamination, or injury.</p>
+    <p>EZE-SET supplies a component. It does not design your piping system, inspect your site, or supervise your crew. If you are not certain the product is right for a given application, stop and consult a qualified professional engineer before installing.</p>
+  </div>
+
+  <div class="legal">
+    <div>
+      <section class="clause">
+        <h3><span>01</span> Installation responsibility</h3>
+        <p>EZE-SET products must be installed strictly in accordance with the product instructions supplied with them and with accepted trade practice for pipe support and bedding. The installer is solely responsible for the method, quality, and outcome of the installation, including:</p>
+        <ul>
+          <li>Selecting the correct anchor and cradle for the pipe size, material, and service.</li>
+          <li>Determining anchor spacing, embedment depth, and the number of supports required for the span and load.</li>
+          <li>Confirming that the anchor is fully and squarely driven, and that the cradle is properly seated on the pipe.</li>
+          <li>Setting and verifying final grade before, during, and after backfill.</li>
+          <li>Protecting the installation from damage during backfill, compaction, and subsequent construction activity.</li>
+          <li>Locating existing buried utilities and services before driving any anchor.</li>
+        </ul>
+        <p>EZE-SET accepts no responsibility or liability for any loss, damage, cost, or injury arising from improper, incomplete, or unsuitable installation, from installation contrary to the product instructions, or from any modification, alteration, cutting, heating, or repair of the product.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>02</span> Codes, permits &amp; inspection</h3>
+        <p>It is the responsibility of the purchaser, installer, contractor, and owner to ensure that any installation using EZE-SET products complies with all applicable building codes, plumbing codes, municipal bylaws, utility standards, engineering specifications, permits, and inspection requirements in the jurisdiction where the work is performed.</p>
+        <p>Nothing in this data sheet or in any other EZE-SET material constitutes a representation that the product satisfies the requirements of any particular code, authority, standard, or specification, or that its use is approved for any particular project. Where a design, drawing, or installation must be approved, sealed, or inspected, obtaining that approval is not the responsibility of EZE-SET.</p>
+      </section>
+    </div>
+
+    <div>
+      <section class="clause">
+        <h3><span>03</span> Site conditions &amp; suitability</h3>
+        <p>The holding capacity of a screw anchor depends entirely on the ground it is driven into. Soil type, moisture content, density, frost, organic content, fill, disturbed or previously excavated ground, groundwater, and seasonal variation all materially affect performance, and none of these are within our knowledge or control.</p>
+        <p>Determining whether ground conditions at a specific location are suitable &mdash; and whether an engineered support is required instead of or in addition to EZE-SET &mdash; is the responsibility of the purchaser, installer, or their engineer. Field results shown in this data sheet were achieved under particular site conditions and are illustrative only. <strong>They are not a prediction or guarantee of performance at any other site.</strong></p>
+      </section>
+
+      <section class="clause">
+        <h3><span>04</span> Intended use &amp; limitations</h3>
+        <p>EZE-SET anchors are intended for the support and grade adjustment of water, sewage, and similar pipe within the sizes and conditions described in the product literature. They are not designed, tested, rated, or sold for:</p>
+        <ul>
+          <li>Structural or load-bearing use of any kind, including the support of foundations, decks, walkways, or equipment.</li>
+          <li>Supporting personnel, scaffolding, formwork, shoring, or trench walls.</li>
+          <li>Use as a lifting, rigging, anchoring, tie-down, or fall-protection point.</li>
+          <li>Gas, fuel, steam, high-pressure, high-temperature, or other hazardous service.</li>
+          <li>Any application in which failure of the support could cause serious injury or death, unless independently reviewed and approved by a qualified professional engineer.</li>
+        </ul>
+        <p>Use outside the intended application is entirely at the user&rsquo;s risk, and voids any warranty that would otherwise apply.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>05</span> Product information</h3>
+        <p>Specifications, dimensions, materials, capacities, images, and descriptions published in this data sheet are provided for general information and are subject to change without notice as the product develops. Colours and finishes may vary from those shown. Product shown may be a prototype or pre-production sample.</p>
+        <p>Where a specific specification matters to your application, confirm it in writing with us before ordering or installing. Written confirmation for a specific order prevails over anything published here.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="tag">Disclaimer &amp; terms of use</span>
+    <span>Current version: ezset.ca/disclaimer.html</span>
+    <span>Page 3 of 4</span>
+  </div>
+</section>
+
+<!-- ============================= PAGE 4 ============================= -->
+<section class="page p4">
+
+  <div class="masthead">
+    <img src="assets/ezeset-logo-alpha.png" alt="EZE-SET">
+    <div class="mast-right">
+      <div class="t1">Disclaimer &amp; Terms of Use</div>
+      <div class="t2">Product Data Sheet &middot; 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    <div>
+      <section class="clause">
+        <h3><span>06</span> Warranty disclaimer</h3>
+        <p>EZE-SET warrants only that its products will be free from defects in material and workmanship at the time of delivery. Any such warranty is limited, at our sole option, to the repair or replacement of the defective product, or to a refund of the purchase price paid for it. Claims must be made in writing within a reasonable time of discovery, and the product must be made available for inspection.</p>
+        <p class="caps">Except as expressly stated above, EZE-SET products are supplied &ldquo;as is&rdquo; and &ldquo;as available&rdquo;, and EZE-SET disclaims all other warranties, conditions, and representations of any kind, whether express, implied, statutory, or arising from a course of dealing or usage of trade, including without limitation any implied warranty or condition of merchantability, merchantable quality, durability, or fitness for a particular purpose.</p>
+        <p>This warranty does not cover normal wear, damage in transit, damage caused by improper handling, storage, installation, backfill, compaction, excavation, vehicle or equipment loading, ground movement, freezing, chemical attack, exposure beyond the product&rsquo;s rated service, or any use outside the intended application described above.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>07</span> Limitation of liability</h3>
+        <p class="caps">To the fullest extent permitted by law, EZE-SET and its owners, employees, agents, distributors, and suppliers shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, or for any loss of profit, revenue, production, contract, business opportunity, data, or goodwill, or for costs of excavation, re-excavation, removal, reinstallation, remediation, cleanup, service interruption, or third-party claims, arising out of or in connection with the product or its use, whether based in contract, tort (including negligence), strict liability, or any other theory, even if advised of the possibility of such damages.</p>
+        <p class="caps">In any event, the total aggregate liability of EZE-SET arising out of or relating to the product shall not exceed the purchase price actually paid for the specific product giving rise to the claim.</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties, conditions, or liabilities &mdash; including liability for death or personal injury caused by negligence, or for fraud. Where a limitation in these terms is not permitted by law, it does not apply, and the remaining provisions continue in full force. Nothing in these terms limits any right you have under applicable consumer protection legislation that cannot lawfully be excluded.</p>
+      </section>
+    </div>
+
+    <div>
+      <section class="clause">
+        <h3><span>08</span> Indemnification</h3>
+        <p>The purchaser and installer agree to indemnify and hold harmless EZE-SET and its owners, employees, agents, distributors, and suppliers from and against any claim, demand, action, loss, damage, liability, cost, or expense (including reasonable legal fees) arising out of the installation, use, misuse, or removal of the product, or out of any failure to comply with product instructions, applicable codes, or these terms.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>09</span> Published content</h3>
+        <p>The content of this data sheet and of the EZE-SET website, including the demonstration video and field photographs, is provided for general marketing and information purposes only. It is not installation instruction, engineering advice, or professional advice of any kind, and must not be relied on as a substitute for the product instructions supplied with the product or for the judgment of a qualified professional.</p>
+        <p>The demonstration video shows a simplified installation under favourable conditions to illustrate the principle of the product. It is not a complete installation procedure and does not show every step, precaution, or site condition that a real installation requires.</p>
+        <p>While we make reasonable efforts to keep our published material accurate and current, we do not warrant that it is free from error or omission.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>10</span> Governing law</h3>
+        <p>These terms are governed by the laws of the Province of British Columbia and the federal laws of Canada applicable in that province, without regard to conflict of laws principles. The courts of British Columbia have exclusive jurisdiction over any dispute arising out of or relating to these terms or the product, and you consent to the jurisdiction of those courts.</p>
+      </section>
+
+      <section class="clause">
+        <h3><span>11</span> Changes to these terms</h3>
+        <p>EZE-SET may revise these terms at any time. The version in effect at the time of your purchase governs that purchase. The current version is published at <strong>ezset.ca/disclaimer.html</strong> &mdash; please review it before placing an order.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div>
+      <p class="kicker">Questions</p>
+      <h2>Ask before you install.</h2>
+      <p>If anything about an application is unclear &mdash; pipe size, spacing, ground conditions, or whether EZE-SET is the right call at all &mdash; get in touch first. We would rather answer a question than hear about a failure.</p>
+    </div>
+    <div class="contact">
+      <div class="lbl">Product &amp; application questions</div>
+      <div class="val"><a href="mailto:btownebill2020@gmail.com?subject=EZE-SET%20—%20product%20question">btownebill2020@gmail.com</a></div>
+      <div class="lbl">Full terms</div>
+      <div class="val"><a href="https://ezset.ca/disclaimer.html">ezset.ca/disclaimer.html</a></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="tag">Set it once. It holds.</span>
+    <span>ezset.ca &middot; &copy; 2026 EZE-SET &mdash; All rights reserved</span>
+    <span>Page 4 of 4</span>
   </div>
 </section>
 
