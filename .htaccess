@@ -4,7 +4,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Canonical host is the apex, ezset.ca — that is what the sheet and the
+  # Canonical host is the apex, ezeset.ca — that is what the sheet and the
   # disclaimer print. Send www there, straight to HTTPS, so http://www
   # resolves in a single redirect rather than two.
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
