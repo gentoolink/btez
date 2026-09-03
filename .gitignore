@@ -6,7 +6,12 @@ Desktop.ini
 # Source material not needed to serve the launch page
 BillsProductLogo/
 images/
-video/
+video/*
+!video/EZ-SET Demo Video/
+video/EZ-SET Demo Video/*
+!video/EZ-SET Demo Video/*.jsx
+!video/EZ-SET Demo Video/*.dc.html
+!video/EZ-SET Demo Video/support.js
 .claude/
 
 # Other launch-page versions and unused assets
